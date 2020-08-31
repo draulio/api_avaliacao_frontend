@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Cadastro</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="codigo/ano" [(ngModel)]="protocolo.codigo_ano" name="codigo_ano">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Solicitante" [(ngModel)]="protocolo.solicitante" name="solicitante">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Resumo" [(ngModel)]="protocolo.resumo" name="resumo">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createProtocolo()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancelProtocolo()">
+        Cancelar
+    </button>
+</mat-card>

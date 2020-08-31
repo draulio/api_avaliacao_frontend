@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Excluir</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="codigo/ano" [(ngModel)]="protocolo.codigo_ano" name="codigo_ano" readonly> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Solicitante" [(ngModel)]="protocolo.solicitante" name="solicitante" readonly>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Resumo" [(ngModel)]="protocolo.resumo" name="resumo" readonly>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteProtocolo()" color="warn">
+        Confirmar Exclusão
+    </button>
+    <button mat-raised-button (click)="cancelProtocolo()">
+        Cancelar
+    </button>
+</mat-card>
+

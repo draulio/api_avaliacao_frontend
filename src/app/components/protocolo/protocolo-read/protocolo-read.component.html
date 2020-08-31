@@ -1,0 +1,62 @@
+
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="protocolos">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef >Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <!-- codigo_ano Column -->
+      <ng-container matColumnDef="codigo_ano">
+        <th mat-header-cell *matHeaderCellDef >Codigo/Ano</th>
+        <td mat-cell *matCellDef="let row">{{row.codigo_ano}}</td>
+      </ng-container>
+      
+      <!-- Solicitante Column -->
+      <ng-container matColumnDef="solicitante">
+        <th mat-header-cell *matHeaderCellDef >Solicitante</th>
+        <td mat-cell *matCellDef="let row">{{row.solicitante}}</td>
+      </ng-container>
+      
+      <!-- Data Column -->
+      <ng-container matColumnDef="data">
+        <th mat-header-cell *matHeaderCellDef >Data</th>
+        <td mat-cell *matCellDef="let row">{{row.data}}</td>
+      </ng-container>
+      
+      <!-- Hora Column -->
+      <ng-container matColumnDef="hora">
+        <th mat-header-cell *matHeaderCellDef >Hora</th>
+        <td mat-cell *matCellDef="let row">{{row.hora}}</td>
+      </ng-container>
+      
+      <!-- Resumo Column -->
+      <ng-container matColumnDef="resumo">
+        <th mat-header-cell *matHeaderCellDef >Resumo</th>
+        <td mat-cell *matCellDef="let row">{{row.resumo}}</td>
+      </ng-container>
+     
+      <!-- Action -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef >Ações</th>
+        <td mat-cell *matCellDef="let row">
+            <a routerLink="/protocolo/update/{{ row.id }}" class="edit">
+                <i class="material-icons">
+                    edit
+                </i>
+            </a>
+            <a routerLink="/protocolo/delete/{{ row.id }}" class="delete">
+                <i class="material-icons">
+                    delete
+                </i>
+            </a>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  
